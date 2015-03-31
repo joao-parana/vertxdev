@@ -23,12 +23,12 @@ RUN \
   wget http://dl.bintray.com/vertx/downloads/vert.x-2.1.2.tar.gz -qO - | tar -xz
 
 # Install sshd
-RUN apt-get install -y openssh-server
-RUN mkdir /var/run/sshd
-RUN echo 'root:admin' | chpasswd
-RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
-RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
-RUN echo "export VISIBLE=now" >> /etc/profile
+# RUN apt-get install -y openssh-server
+# RUN mkdir /var/run/sshd
+# RUN echo 'root:admin' | chpasswd
+# RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+# RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+# RUN echo "export VISIBLE=now" >> /etc/profile
 
 # Add vertx to the path
 ENV PATH /usr/local/vertx/vert.x-2.1.2/bin:$PATH
