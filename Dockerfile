@@ -36,8 +36,8 @@ ENV PATH /usr/local/vertx/vert.x-2.1.2/bin:$PATH
 RUN mkdir -p /usr/local/src
 WORKDIR /usr/local/src
 
-// EXPOSE 22
-// EXPOSE 80
-// EXPOSE 8080
+EXPOSE 22
+EXPOSE 80
+EXPOSE 8080
 
 CMD ["bash"]

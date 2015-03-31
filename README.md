@@ -32,6 +32,8 @@ open http://$(docker-ip):1443
 ```
 Define in your .bash_profile this function:
 
+```
 docker-ip() { 
   boot2docker ip 2> /dev/null 
 } 
+```
